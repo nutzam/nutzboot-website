@@ -73,7 +73,7 @@ body {
 
 .footer {
   position: fixed;
-  bottom: 1.5rem;
+  bottom: 1.2rem;
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
@@ -95,7 +95,7 @@ a:link {
 
   body {
     background-attachment: fixed;
-    padding-top: 4rem;
+    padding-top: 1.5rem;
   }
 
   .hcenter {
@@ -103,22 +103,23 @@ a:link {
   }
 
   .ht1 {
-    font-size: 4.5rem;
+    font-size: 2.4rem;
   }
 
   .ht2 {
-    font-size: 4rem;
+    font-size: 2.2rem;
   }
 
   .countdown {
-    margin: 1.5rem auto;
+    margin: 0.4rem auto;
   }
 
   .ct {
     display: block;
-    width: 60%;
+    width: 40%;
     margin: 1rem auto;
     text-align: center;
+    font-size: 2.5rem;
 
     &:first-child {
       margin-left: auto;
@@ -127,12 +128,13 @@ a:link {
 
   .sdown {
     text-align: center;
+    font-size: 2rem;
   }
 
   .footer {
-    position: inherit;
-    padding-bottom: 1.5rem;
-    font-size: 1.1rem;
+    //position: inherit;
+    //padding-bottom: 1.5rem;
+    font-size: 0.8rem;
   }
 
 }
