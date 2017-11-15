@@ -10,142 +10,58 @@
     <script type="text/javascript" src="rs/js/jquery.min.js"></script>
     <script type="text/javascript" src="rs/js/jquery.countdown.min.js"></script>
     <script type="text/javascript" src="rs/js/anime.min.js"></script>
-    <!--<link rel="stylesheet" href="rs/css/animate.min.css">-->
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            font: 13px/1.4 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-            color: #FFF;
-            background-image: url("rs/img/bg04.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
-        .bgcontainer {
-            /*background: rgba(255, 255, 255, 0.2);*/
-            background: rgba(0, 0, 0, 0.2);
-            width: 100%;
-            height: 100%;
-        }
-
-        .container {
-            position: relative;
-            width: 1024px;
-            text-align: center;
-            margin: 0 auto;
-            padding-top: 60px;
-        }
-
-        h1 {
-            font-size: 100px;
-            margin: 0 auto;
-            padding: 12px 0;
-        }
-
-        h2 {
-            font-size: 70px;
-            margin: 0 auto;
-            padding: 12px 0;
-        }
-
-        .ani-txt, .af-txt {
-            display: inline-block;
-        }
-
-        .ani-txt.nb .n {
-            color: #7da7d9;
-        }
-
-        .ani-txt.nb .b {
-            color: #ba5603;
-        }
-
-        .styled {
-            margin: 64px auto;
-        }
-
-        .styled div {
-            display: inline-block;
-            margin-left: 20px;
-            font-size: 70px;
-            font-weight: 100;
-            line-height: 1;
-            text-align: right;
-        }
-
-        /* IE7 inline-block hack */
-        * + html .styled div {
-            display: inline;
-            zoom: 1;
-        }
-
-        .styled div:first-child {
-            margin-left: 0;
-        }
-
-        .styled div span {
-            display: block;
-            border-top: 1px solid #cecece;
-            padding-top: 6px;
-            font-size: 60px;
-            text-transform: uppercase;
-            text-align: left;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 24px;
-            width: 100%;
-            height: 32px;
-            font-size: 24px;
-            text-align: center;
-            text-transform: uppercase;
-            line-height: 1;
-        }
-
-        a {
-            color: #7da7d9;
-            text-decoration: none;
-        }
-
-        a:link {
-
-        }
-    </style>
+    <link rel="stylesheet" href="rs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="rs/css/countdown.css">
 </head>
 <body>
-<div class="bgcontainer">
-    <div class="container">
-        <h2>
-            <div class="ani-txt we">WE</div>
-            <div class="af-txt">ARE</div>
-        </h2>
-        <h1>COMING SOON</h1>
-        <div class="countdown styled"></div>
+<div class="container">
+    <div class="row">
+        <div class="col hcenter">
+            <div class="ht2 ani-txt we">WE</div><div class="ht2 af-txt">&nbsp;ARE</div>
+        </div>
     </div>
-    <div class="footer">
-        Powered by <a href="https://nutzam.com">Nutz</a>
+    <div class="row">
+        <div class="col hcenter">
+            <div class="ht1">COMING SOON</div>
+        </div>
     </div>
+    <div class="row countdown">
+        <div class="col hcenter">
+            <div class="ct">
+                <span class="days"></span><span class="sdown">days</span>
+            </div>
+            <div class="ct">
+                <span class="hrs"></span><span class="sdown">hrs</span>
+            </div>
+            <div class="ct">
+                <span class="min"></span><span class="sdown">min</span>
+            </div>
+            <div class="ct">
+                <span class="sec"></span><span class="sdown">sec</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    Powered by <a href="https://nutzam.com">Nutz</a>
 </div>
 </body>
 <script type="text/javascript">
     $(function () {
         // 开始倒计时
         var endDate = "2017-11-22";
-        $('.countdown.styled').countdown({
+        var $cd = $('.countdown');
+        var $days = $cd.find('.days');
+        var $hrs = $cd.find('.hrs');
+        var $min = $cd.find('.min');
+        var $sec = $cd.find('.sec');
+        $cd.countdown({
             date: endDate,
             render: function (data) {
-                $(this.el).html("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div><div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div><div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div><div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+                $days.html(this.leadingZeros(data.days, 2));
+                $hrs.html(this.leadingZeros(data.hours, 2));
+                $min.html(this.leadingZeros(data.min, 2));
+                $sec.html(this.leadingZeros(data.sec, 2));
             }
         });
         // 开始切换WE、NB
@@ -167,7 +83,7 @@
                 } else {
                     window.clearInterval(changeIn);
                     setTimeout(function () {
-                        $aftxt.html("IS&nbsp;&nbsp;");
+                        $aftxt.html("&nbsp;&nbsp;IS");
                     }, 1000)
                 }
             }, 1200);

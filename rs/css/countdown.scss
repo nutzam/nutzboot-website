@@ -1,0 +1,138 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  //font: 13px/1.4 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  color: #FFF;
+  background-image: url("../img/bg05.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 6rem;
+}
+
+.bgcontainer {
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  padding-top: 6rem;
+}
+
+.hcenter {
+  text-align: center;
+}
+
+.ht1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.ht2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+.ani-txt, .af-txt {
+  display: inline-block;
+}
+
+.ani-txt.nb .n {
+  color: #7da7d9;
+}
+
+.ani-txt.nb .b {
+  color: #ba5603;
+}
+
+.countdown {
+  margin: 3rem auto;
+}
+
+.ct {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 1;
+  text-align: right;
+  margin: 0 auto;
+  margin-left: 1rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.sdown {
+  display: block;
+  border-top: 1px solid #cecece;
+  padding-top: 6px;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1.5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+a {
+  color: #7da7d9;
+  text-decoration: none;
+}
+
+a:link {
+
+}
+
+// 手机屏幕
+@media (max-width: 576px) {
+
+  body {
+    background-attachment: fixed;
+    padding-top: 4rem;
+  }
+
+  .hcenter {
+    text-align: center;
+  }
+
+  .ht1 {
+    font-size: 4.5rem;
+  }
+
+  .ht2 {
+    font-size: 4rem;
+  }
+
+  .countdown {
+    margin: 1.5rem auto;
+  }
+
+  .ct {
+    display: block;
+    width: 60%;
+    margin: 1rem auto;
+    text-align: center;
+
+    &:first-child {
+      margin-left: auto;
+    }
+  }
+
+  .sdown {
+    text-align: center;
+  }
+
+  .footer {
+    position: inherit;
+    padding-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+}
