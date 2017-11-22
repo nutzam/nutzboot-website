@@ -31,9 +31,6 @@ body {
   width: 100%;
   top: 0; }
 
-.bg-img-1 {
-  background: url("../img/nutzboot_bg.png"); }
-
 .bg-img-2 {
   background: url("../img/bg05.jpg"); }
 
@@ -44,6 +41,11 @@ body {
   width: 100%;
   background-size: cover;
   background-attachment: fixed; }
+
+.bg-img-1 {
+  background: url("../img/nutzboot_bg.png");
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .preloader {
   position: fixed;
