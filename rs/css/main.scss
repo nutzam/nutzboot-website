@@ -83,6 +83,13 @@ $loading-m: -($loading-s / 2);
   margin: $loading-m 0 0 $loading-m;
 }
 
+.logo {
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
 /*======= Home =======*/
 
 .home {

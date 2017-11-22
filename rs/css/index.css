@@ -420,14 +420,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /*===== Navbar Custom ======*/
 
-.logo {
-    font-weight: 500;
-    font-size: 22px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
-}
-
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.9rem;
