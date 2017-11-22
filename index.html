@@ -1,94 +1,302 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
-    <title>Coming Soon</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon"/>
-    <script type="text/javascript" src="rs/js/jquery.min.js"></script>
-    <script type="text/javascript" src="rs/js/jquery.countdown.min.js"></script>
-    <script type="text/javascript" src="rs/js/anime.min.js"></script>
-    <link rel="stylesheet" href="rs/css/bootstrap.min.css">
-    <link rel="stylesheet" href="rs/css/countdown.css">
+    <meta name="keywords"
+          content="Nutz,NutzBoot,NB,Nutz是什么,Nutz下载,Nutz社区, Java框架,JavaWeb,Aop,ORM,Dubbo,JDK8,JavaEE,tomcat,jetty">
+    <meta name="description" content="它是开源的，商用也是完全免费的。详尽的文档，众多线上项目 不吹嘘概念,代码严谨可靠，近千个testcase,坚如磐石。">
+    <meta name="author" content="pangwu86">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>NutzBoot</title>
+    <!--字体-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <!--依赖css-->
+    <link href="rs/css/bootstrap.min.css" rel="stylesheet">
+    <link href="rs/css/animate.css" rel="stylesheet">
+    <link href="rs/css/balloon.min.css" rel="stylesheet">
+    <link href="rs/css/themify-icons.css" rel="stylesheet">
+    <link href="rs/css/font-awesome.min.css" rel="stylesheet">
+    <!--主css-->
+    <link href="rs/css/index.css" rel="stylesheet">
+    <link href="rs/css/main.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col hcenter">
-            <div class="ht2 ani-txt we">WE</div>
-            <div class="ht2 af-txt">&nbsp;ARE</div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col hcenter">
-            <div class="ht1">COMING SOON</div>
-        </div>
-    </div>
-    <div class="row countdown">
-        <div class="col hcenter">
-            <div class="ct">
-                <span class="days"></span><span class="sdown">days</span>
-            </div>
-            <div class="ct">
-                <span class="hrs"></span><span class="sdown">hrs</span>
-            </div>
-            <div class="ct">
-                <span class="min"></span><span class="sdown">min</span>
-            </div>
-            <div class="ct">
-                <span class="sec"></span><span class="sdown">sec</span>
-            </div>
-        </div>
-    </div>
+<!-- 预加载，显示logo -->
+<div class="preloader">
+    <div class="status">&nbsp;</div>
 </div>
-<div class="footer">
-    Powered by <a href="https://nutzam.com">Nutz</a>
-</div>
+
+<!--导航-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">NutzBoot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars001"
+                aria-controls="navbars001" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbars001">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#more">整合方案</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#doc">文档手册</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://nutzam.com" target="_blank">关于Nutz</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="clearfix"></div>
+
+<!-- 首页 -->
+<section class="home bg-img-1 parallax" data-stellar-background-ratio="0.5">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="home-wrapper text-center">
+                    <h1 class="animated fadeInDown wow" data-wow-delay=".1s">NutzBoot - 微服务解决方案，比快更快</h1>
+                    <p class="animated fadeInDown wow" data-wow-delay=".2s">以Nutz为核心, 用极小的开发成本, 帮您快速搭建生产级微服务。</p>
+                    <a href="https://get.nutz.io" target="_blank"
+                       class="btn btn-primary btn-rounded w-lg animated fadeInDown wow" data-wow-delay=".4s">马上尝试</a>
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 整合方案 -->
+<section class="section" id="more">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="title zoomIn animated wow" data-wow-delay=".1s">开箱即用的整合方案</h2>
+                <p class="sub-title zoomIn animated wow" data-wow-delay=".2s">可视化引导式配置表单帮您闪电般生成项目原型
+                    <br/> 所有配置细节都有NB自动完成，开发从未如此轻松。 </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="service-item animated fadeInLeft wow" data-wow-delay=".1s">
+                    <i class=" ti-server"></i>
+                    <div class="service-detail">
+                        <h4>数据库</h4>
+                        <ul>
+                            <li>Redis</li>
+                            <li>MongoDB</li>
+                            <li>SSDB</li>
+                            <li>Cassandra</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-item animated fadeInLeft wow" data-wow-delay=".1s">
+                    <i class=" ti-brush-alt"></i>
+                    <div class="service-detail">
+                        <h4>模板引擎</h4>
+                        <ul>
+                            <li>Beetl</li>
+                            <li>Vecloity</li>
+                            <li>FreeMarker</li>
+                            <li>Thymeleaf</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-item animated fadeInLeft wow" data-wow-delay=".1s">
+                    <i class=" ti-comments"></i>
+                    <div class="service-detail">
+                        <h4>消息队列</h4>
+                        <ul>
+                            <li>ZeroMQ</li>
+                            <li>RocketMQ</li>
+                            <li>ActiveMQ</li>
+                            <li>RabbitMQ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="service-item animated fadeInLeft wow" data-wow-delay=".1s">
+                    <i class=" ti-rocket"></i>
+                    <div class="service-detail">
+                        <h4>工作流</h4>
+                        <ul>
+                            <li>Activity</li>
+                            <li>UFLO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="service-more zoomIn animated wow" data-wow-delay=".1s">更多方案正在路上...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 文档 -->
+<section class="section bg-gray" id="doc">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="feature-detail">
+                    <h2 class="title fadeIn animated wow" data-wow-delay=".1s">完善的文档与示例</h2>
+                    <p class="sub fadeIn animated wow" data-wow-delay=".2s">这里有各种细节的一一讲解，各种窍门的一一展示
+                        <br/> 更方面的定制属于您自己的微服务. </p>
+                    <!--<ul class="list-unstyled">-->
+                    <!--<li>-->
+                    <!--<i class=" ti-arrow-circle-right"></i> -->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<i class=" ti-arrow-circle-right"></i>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <a href="http://nutzam.com/core/boot/overview.html" target="_blank"
+                       class="btn btn-primary btn-rounded w-lg animated fadeInDown wow" data-wow-delay=".4s">查看文档</a>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <img src="rs/img/doc.png" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 第二张图 -->
+<section class="fun-facts bg-img-2 parallax" data-stellar-background-ratio="0.5">
+    <div class="bg-overlay"></div>
+    <div class="container">
+
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-3 facts">
+                <i class="ti-timer"></i>
+                <h1><span class="counter">2920</span> +</h1>
+                <h4>天</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 facts">
+                <i class="ti-pencil-alt"></i>
+                <h1><span class="counter">100000</span> +</h1>
+                <h4>行代码</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 facts">
+                <i class="ti-briefcase"></i>
+                <h1><span class="counter">800</span> +</h1>
+                <h4>测试用例</h4>
+            </div>
+            <div class="col-md-3 col-sm-3 facts">
+                <i class=" ti-user"></i>
+                <h1><span class="counter">50</span> +</h1>
+                <h4>提交者</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END HOME -->
+
+<!-- FAQ -->
+<section class="section bg-gray" id="faq">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1 class="title zoomIn animated wow" data-wow-delay=".1s">FAQ</h1>
+                <p class="sub-title zoomIn animated wow" data-wow-delay=".2s">这里有很多常见问题的答案
+                    <br/> 没有你需要的问题? 那就直接上Github给我们提交Issue吧. </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+            <div class="col-md-5">
+                <div class="animated fadeInLeft wow" data-wow-delay=".1s">
+                    <h4 class="question" data-wow-delay=".1s">问题1?</h4>
+                    <p class="answer">等wendal填充</p>
+                </div>
+
+                <div class="animated fadeInLeft wow" data-wow-delay=".3s">
+                    <h4 class="question" data-wow-delay=".1s">问题1?</h4>
+                    <p class="answer">等wendal填充</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-5">
+                <div class="animated fadeInRight wow" data-wow-delay=".2s">
+                    <h4 class="question" data-wow-delay=".1s">问题1?</h4>
+                    <p class="answer">等wendal填充</p>
+                </div>
+
+                <div class="animated fadeInRight wow" data-wow-delay=".4s">
+                    <h4 class="question" data-wow-delay=".1s">问题1?</h4>
+                    <p class="answer">等wendal填充</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--底部-->
+<footer class="footer bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="follow">Follow us</h4>
+                <ul class="social">
+                    <li><a href="javascript:;" title="公众号" data-balloon="微信号：rain_on_sand，欢迎订阅"
+                           data-balloon-pos="up"><span
+                            class="icon fa fa-weixin"></span></a></li>
+                    <li><a href="javascript:;" title="qq群" data-balloon="Nutz社区群：68428921，Nutz&XBlink：58444676。欢迎加入"
+                           data-balloon-pos="up"><span class="icon fa fa-qq"></span></a></li>
+                    <li><a href="https://github.com/nutzam" title="github"><span class="icon fa fa-github-alt"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 text-center">
+                <p class="copyright">All Rights Reserved 2009-2017 Nutz.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--依赖库-->
+<script src="rs/js/jquery.min.js"></script>
+<script src="rs/js/popper.min.js"></script>
+<script src="rs/js/bootstrap.min.js"></script>
+<script src="rs/js/jquery.easing.1.3.min.js"></script>
+<script src="rs/js/SmoothScroll.js"></script>
+<script src="rs/js/wow.min.js"></script>
+<script src="rs/js/jquery.waypoints.min.js"></script>
+<script src="rs/js/jquery.counterup.min.js"></script>
+<!--主js-->
+<script src="rs/js/main.js"></script>
 </body>
-<script type="text/javascript">
-    $(function () {
-        // 开始倒计时
-        var endDate = "2017-11-22 18:00:00";
-        var $cd = $('.countdown');
-        var $days = $cd.find('.days');
-        var $hrs = $cd.find('.hrs');
-        var $min = $cd.find('.min');
-        var $sec = $cd.find('.sec');
-        $cd.countdown({
-            date: endDate,
-            render: function (data) {
-                $days.html(this.leadingZeros(data.days, 2));
-                $hrs.html(this.leadingZeros(data.hours, 2));
-                $min.html(this.leadingZeros(data.min, 2));
-                $sec.html(this.leadingZeros(data.sec, 2));
-            }
-        });
-        // 开始切换WE、NB
-        var $antxt = $('.ani-txt');
-        var $aftxt = $('.af-txt');
-        var isOut = false;
-        setTimeout(function () {
-            var changeIn = setInterval(function () {
-                console.log('change txt');
-                anime({
-                    targets: '.ani-txt.we',
-                    translateY: isOut ? 0 : -300
-                });
-                isOut = !isOut;
-                if (isOut) {
-                    setTimeout(function () {
-                        $antxt.addClass('nb').html("<span class='n'>N</span><span class='b'>B</span>");
-                    }, 1000)
-                } else {
-                    window.clearInterval(changeIn);
-                    setTimeout(function () {
-                        $aftxt.html("&nbsp;&nbsp;IS");
-                    }, 1000)
-                }
-            }, 1200);
-        }, 1800)
-    });
-</script>
+
 </html>
