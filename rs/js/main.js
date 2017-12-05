@@ -26,8 +26,8 @@ $(document).ready(function () {
     );
     wow.init();
 
-    $('.counter').counterUp({
-        delay: 100,
-        time: 1200
+    $('.counter').countUp({
+        delay: 20,
+        time: 1000
     });
 });
